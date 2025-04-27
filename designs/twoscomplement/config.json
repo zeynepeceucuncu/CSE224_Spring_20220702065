@@ -1,0 +1,15 @@
+{
+  "DESIGN_NAME": "twoscomplement",
+  "VERILOG_FILES": ["dir::src/twoscomplement.v"],
+  "CLOCK_PERIOD": 10.0,
+  "CLOCK_PORT": "clk",
+  "SYNTH_STRATEGY": "AREA 0",
+  "PL_TARGET_DENSITY": 0.65,
+  "FP_CORE_UTIL": 45,
+  "FP_ASPECT_RATIO": 1.0,
+  "RUN_POWER_GRID": 0,
+  "FP_PDN_VOFFSET": 3,
+  "FP_PDN_HOFFSET": 3,
+  "FP_PDN_VPITCH": 8,
+  "FP_PDN_HPITCH": 8
+}
