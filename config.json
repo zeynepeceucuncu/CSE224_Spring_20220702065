@@ -1,0 +1,6 @@
+{
+    "DESIGN_NAME": "twoscomplement",
+    "VERILOG_FILES": ["src/twoscomplement.v"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10.0
+}
