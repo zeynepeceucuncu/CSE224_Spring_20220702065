@@ -1,0 +1,6 @@
+%Warning-WIDTHTRUNC: /openlane/designs/myCPU/src/InstructionDecoder.v:12:16: Operator ASSIGNW expects 32 bits on the Assign RHS, but Assign RHS's REPLICATE generates 33 bits.
+                                                                           : ... note: In instance 'CPU_top.decoder'
+   12 |     assign imm = {{19{instr[13]}}, instr[13:0]};
+      |                ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.018
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
