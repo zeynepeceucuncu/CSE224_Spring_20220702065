@@ -1,0 +1,287 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: _132_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: an[1] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.15    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.15    0.00    0.00 ^ _132_/CLK (sky130_fd_sc_hd__dfxtp_2)
+     4    0.01    0.07    0.40    0.40 ^ _132_/Q (sky130_fd_sc_hd__dfxtp_2)
+                                         display.digit_select[0] (net)
+                  0.07    0.00    0.40 ^ _066_/A (sky130_fd_sc_hd__inv_2)
+     4    0.01    0.03    0.05    0.44 v _066_/Y (sky130_fd_sc_hd__inv_2)
+                                         _031_ (net)
+                  0.03    0.00    0.44 v _067_/A (sky130_fd_sc_hd__or3_2)
+     1    0.00    0.07    0.48    0.92 v _067_/X (sky130_fd_sc_hd__or3_2)
+                                         _032_ (net)
+                  0.07    0.00    0.92 v _068_/A (sky130_fd_sc_hd__buf_1)
+     1    0.03    0.19    0.24    1.16 v _068_/X (sky130_fd_sc_hd__buf_1)
+                                         an[1] (net)
+                  0.19    0.00    1.16 v an[1] (out)
+                                  1.16   data arrival time
+
+                  0.15   10.00   10.00   clock clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -1.16   data arrival time
+-----------------------------------------------------------------------------
+                                  6.59   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+
+max slew violations count Typical: 0
+max fanout violations count Typical: 0
+max cap violations count Typical: 0
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 169 unannotated drivers.
+ clk
+ control
+ rst
+ _064_/X
+ _065_/X
+ _066_/Y
+ _067_/X
+ _068_/X
+ _069_/X
+ _070_/X
+ _071_/Y
+ _072_/X
+ _073_/X
+ _074_/Y
+ _075_/Y
+ _076_/X
+ _077_/X
+ _078_/X
+ _079_/Y
+ _080_/X
+ _081_/X
+ _082_/X
+ _083_/X
+ _084_/X
+ _085_/X
+ _086_/Y
+ _087_/Y
+ _088_/X
+ _089_/X
+ _090_/X
+ _091_/X
+ _092_/Y
+ _093_/X
+ _094_/X
+ _095_/Y
+ _096_/X
+ _097_/X
+ _098_/X
+ _099_/X
+ _100_/X
+ _101_/X
+ _102_/X
+ _103_/X
+ _104_/X
+ _105_/X
+ _106_/X
+ _107_/Y
+ _108_/Y
+ _109_/Y
+ _110_/X
+ _111_/Y
+ _112_/X
+ _113_/X
+ _114_/X
+ _115_/X
+ _116_/X
+ _117_/X
+ _118_/X
+ _119_/X
+ _120_/X
+ _121_/X
+ _122_/X
+ _123_/X
+ _124_/X
+ _125_/Y
+ _126_/X
+ _127_/X
+ _128_/X
+ _129_/X
+ _130_/X
+ _131_/Y
+ _132_/Q
+ _133_/Q
+ _134_/Q
+ _135_/Q
+ _136_/Q
+ _137_/Q
+ _138_/Q
+ _139_/Q
+ _140_/Q
+ _141_/Q
+ _142_/Q
+ _143_/Q
+ _144_/Q
+ _145_/Q
+ _146_/Q
+ _147_/Q
+ _148_/Q
+ _149_/Q
+ _150_/Q
+ _151_/Q
+ _152_/HI
+ _152_/LO
+ _153_/HI
+ _153_/LO
+ _154_/HI
+ _154_/LO
+ _155_/HI
+ _155_/LO
+ _156_/HI
+ _156_/LO
+ _157_/HI
+ _157_/LO
+ _158_/HI
+ _158_/LO
+ _159_/HI
+ _159_/LO
+ _160_/HI
+ _160_/LO
+ _161_/HI
+ _161_/LO
+ _162_/HI
+ _162_/LO
+ _163_/HI
+ _163_/LO
+ _164_/HI
+ _164_/LO
+ _165_/HI
+ _165_/LO
+ _166_/HI
+ _166_/LO
+ _167_/HI
+ _167_/LO
+ _168_/HI
+ _168_/LO
+ _169_/HI
+ _169_/LO
+ _170_/HI
+ _170_/LO
+ _171_/HI
+ _171_/LO
+ _172_/HI
+ _172_/LO
+ _173_/HI
+ _173_/LO
+ _174_/HI
+ _174_/LO
+ _175_/HI
+ _175_/LO
+ _176_/HI
+ _176_/LO
+ _177_/HI
+ _177_/LO
+ _178_/HI
+ _178_/LO
+ _179_/HI
+ _179_/LO
+ _180_/HI
+ _180_/LO
+ _181_/HI
+ _181_/LO
+ _182_/HI
+ _182_/LO
+ _183_/HI
+ _183_/LO
+ _184_/HI
+ _184_/LO
+ _185_/HI
+ _185_/LO
+ _186_/HI
+ _186_/LO
+ _187_/HI
+ _187_/LO
+ _188_/HI
+ _188_/LO
+ _189_/HI
+ _189_/LO
+ _190_/HI
+ _190_/LO
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 39 unconstrained endpoints.
+  Result[0]
+  Result[10]
+  Result[11]
+  Result[12]
+  Result[13]
+  Result[14]
+  Result[15]
+  Result[16]
+  Result[17]
+  Result[18]
+  Result[19]
+  Result[1]
+  Result[20]
+  Result[21]
+  Result[22]
+  Result[23]
+  Result[24]
+  Result[25]
+  Result[26]
+  Result[27]
+  Result[28]
+  Result[29]
+  Result[2]
+  Result[30]
+  Result[31]
+  Result[3]
+  Result[4]
+  Result[5]
+  Result[6]
+  Result[7]
+  Result[8]
+  Result[9]
+  seg[0]
+  seg[1]
+  seg[2]
+  seg[3]
+  seg[4]
+  seg[5]
+  seg[6]

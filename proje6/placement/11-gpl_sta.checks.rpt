@@ -1,0 +1,160 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: _132_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: an[1] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.15    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.15    0.00    0.00 ^ _132_/CLK (sky130_fd_sc_hd__dfxtp_2)
+     4    0.01    0.07    0.40    0.40 ^ _132_/Q (sky130_fd_sc_hd__dfxtp_2)
+                                         display.digit_select[0] (net)
+                  0.07    0.00    0.40 ^ _066_/A (sky130_fd_sc_hd__inv_2)
+     4    0.01    0.03    0.05    0.45 v _066_/Y (sky130_fd_sc_hd__inv_2)
+                                         _031_ (net)
+                  0.03    0.00    0.45 v _067_/A (sky130_fd_sc_hd__or3_2)
+     1    0.00    0.07    0.48    0.92 v _067_/X (sky130_fd_sc_hd__or3_2)
+                                         _032_ (net)
+                  0.07    0.00    0.92 v _068_/A (sky130_fd_sc_hd__buf_1)
+     1    0.03    0.20    0.25    1.17 v _068_/X (sky130_fd_sc_hd__buf_1)
+                                         an[1] (net)
+                  0.20    0.00    1.17 v an[1] (out)
+                                  1.17   data arrival time
+
+                  0.15   10.00   10.00   clock clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -1.17   data arrival time
+-----------------------------------------------------------------------------
+                                  6.58   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+
+max slew violations count Typical: 0
+max fanout violations count Typical: 0
+max cap violations count Typical: 0
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 42 unannotated drivers.
+ clk
+ control
+ rst
+ _152_/LO
+ _153_/HI
+ _154_/HI
+ _155_/HI
+ _156_/HI
+ _157_/HI
+ _158_/HI
+ _159_/HI
+ _160_/HI
+ _161_/HI
+ _162_/HI
+ _163_/HI
+ _164_/HI
+ _165_/HI
+ _166_/HI
+ _167_/HI
+ _168_/HI
+ _169_/HI
+ _170_/HI
+ _171_/HI
+ _172_/HI
+ _173_/HI
+ _174_/HI
+ _175_/HI
+ _176_/HI
+ _177_/HI
+ _178_/HI
+ _179_/HI
+ _180_/HI
+ _181_/HI
+ _182_/HI
+ _183_/HI
+ _184_/HI
+ _185_/HI
+ _186_/HI
+ _187_/HI
+ _188_/HI
+ _189_/HI
+ _190_/HI
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 39 unconstrained endpoints.
+  Result[0]
+  Result[10]
+  Result[11]
+  Result[12]
+  Result[13]
+  Result[14]
+  Result[15]
+  Result[16]
+  Result[17]
+  Result[18]
+  Result[19]
+  Result[1]
+  Result[20]
+  Result[21]
+  Result[22]
+  Result[23]
+  Result[24]
+  Result[25]
+  Result[26]
+  Result[27]
+  Result[28]
+  Result[29]
+  Result[2]
+  Result[30]
+  Result[31]
+  Result[3]
+  Result[4]
+  Result[5]
+  Result[6]
+  Result[7]
+  Result[8]
+  Result[9]
+  seg[0]
+  seg[1]
+  seg[2]
+  seg[3]
+  seg[4]
+  seg[5]
+  seg[6]

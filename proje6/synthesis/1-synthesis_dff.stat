@@ -1,0 +1,25 @@
+
+55. Printing statistics.
+
+=== TopModule ===
+
+   Number of wires:                 73
+   Number of wire bits:            167
+   Number of public wires:           8
+   Number of public wire bits:      66
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                105
+     $_ANDNOT_                      11
+     $_AND_                          4
+     $_MUX_                          3
+     $_NAND_                         9
+     $_NOR_                          1
+     $_NOT_                          3
+     $_ORNOT_                        5
+     $_OR_                          32
+     $_XNOR_                         4
+     $_XOR_                         13
+     sky130_fd_sc_hd__dfxtp_2       20
+
