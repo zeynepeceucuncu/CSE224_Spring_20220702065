@@ -1,3 +1,5 @@
+Hocam 1. projemiz 
+
 # Lab4 - Register File and ALU Design (OpenLane ASIC Flow)
 
 This project implements a 32-register file and a 2-bit opcode ALU using Verilog, synthesized and placed-routed using the OpenLane flow.
